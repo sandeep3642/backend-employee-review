@@ -1,0 +1,271 @@
+2024-08-11T17:52:55.152Z [31merror[39m: ::1 Cast to Number failed for value "string" (type string) at path "phoneNumber" for model "clients"
+2024-08-11T17:54:20.110Z [31merror[39m: ::1 The bucket does not allow ACLs
+2024-08-11T17:57:30.135Z [31merror[39m: ::1 The bucket does not allow ACLs
+2024-08-12T04:48:05.189Z [31merror[39m: ::1 Email already exists
+2024-09-14T03:15:45.135Z [31merror[39m: Request failed with status code 401
+2024-09-14T03:16:49.216Z [31merror[39m: Request failed with status code 401
+2024-09-14T03:18:03.478Z [31merror[39m: Request failed with status code 401
+2024-09-14T03:18:37.764Z [31merror[39m: Request failed with status code 401
+2024-09-14T03:21:44.462Z [31merror[39m: Request failed with status code 404
+2024-09-14T03:22:47.912Z [31merror[39m: Request failed with status code 404
+2024-09-14T03:24:55.270Z [31merror[39m: Request failed with status code 404
+2024-09-14T03:24:58.686Z [31merror[39m: Request failed with status code 404
+2024-09-14T03:28:10.792Z [31merror[39m: Request failed with status code 404
+2024-09-14T03:28:56.584Z [31merror[39m: Request failed with status code 404
+2024-09-14T03:29:21.923Z [31merror[39m: Request failed with status code 429
+2024-09-14T03:31:07.078Z [31merror[39m: Request failed with status code 429
+2024-09-14T03:39:33.158Z [31merror[39m: The OPENAI_API_KEY environment variable is missing or empty; either provide it, or instantiate the OpenAI client with an apiKey option, like new OpenAI({ apiKey: 'My API Key' }).
+2024-09-14T03:40:42.572Z [31merror[39m: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+2024-09-14T03:45:28.841Z [31merror[39m: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+2024-09-14T03:59:49.815Z [31merror[39m: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+2024-09-14T04:40:09.263Z [31merror[39m: Email is Already Exist 
+2024-09-14T04:41:34.042Z [31merror[39m: EmployeeId  is Already Exist 
+2024-09-14T04:43:09.061Z [31merror[39m: EmployeeId  is Already Exist 
+2024-09-14T05:38:11.427Z [31merror[39m: EmployeeId  is Already Exist 
+2024-09-14T06:42:05.288Z [31merror[39m: Cast to ObjectId failed for value "string" (type string) at path "_id" for model "employes"
+2024-09-14T08:03:48.170Z [31merror[39m: GPT API call failed: Request failed with status code 429
+2024-09-14T08:47:07.383Z [31merror[39m: Cannot read properties of null (reading 'password')
+2024-09-14T11:37:26.085Z [31merror[39m: Cannot read properties of null (reading 'password')
+2024-09-14T14:36:55.721Z [31merror[39m: EmployeeId  is Already Exist 
+2024-09-14T14:41:58.438Z [31merror[39m: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+2024-09-14T14:41:58.450Z [31merror[39m: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+2024-09-14T14:51:58.730Z [31merror[39m: Cast to ObjectId failed for value "string" (type string) at path "_id" for model "employes"
+2024-09-14T14:57:49.419Z [31merror[39m: Email is Already Exist 
+2024-09-14T15:29:54.402Z [31merror[39m: Email is Already Exist 
+2024-09-14T15:30:08.067Z [31merror[39m: Email is Already Exist 
+2024-09-14T16:51:55.564Z [31merror[39m: Employee not found
+2024-09-14T16:52:43.232Z [31merror[39m: Employee not found
+2024-09-14T16:55:25.412Z [31merror[39m: GPT API call failed: Request failed with status code 429
+2024-09-15T00:56:29.548Z [31merror[39m: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+2024-09-15T00:57:04.139Z [31merror[39m: 400 The requested model 'gpt-4o' does not exist.
+2024-09-15T00:59:16.636Z [31merror[39m: 400 The requested model 'gpt-4' does not exist.
+2024-09-15T01:15:02.481Z [31merror[39m: 400 The requested model 'gpt-4o' does not exist.
+2024-09-15T06:04:24.337Z [31merror[39m: input must be a 24 character hex string, 12 byte Uint8Array, or an integer
+2024-09-15T06:04:41.742Z [31merror[39m: GPT API call failed: Request failed with status code 429
+2024-09-15T11:40:40.880Z [31merror[39m: Gemini API call failed: Cannot read properties of undefined (reading '0')
+2024-09-15T11:41:24.206Z [31merror[39m: Gemini API call failed: Cannot read properties of undefined (reading '0')
+2024-09-15T11:42:33.546Z [31merror[39m: Gemini API call failed: Cannot read properties of undefined (reading '0')
+2024-09-15T11:43:35.776Z [31merror[39m: Gemini API call failed: Cannot read properties of undefined (reading '0')
+2024-09-15T11:44:20.557Z [31merror[39m: Gemini API call failed: Cannot read properties of undefined (reading '0')
+2024-09-15T11:46:10.949Z [31merror[39m: Feedback validation failed: feedback: Cast to string failed for value "[
+  {
+    content: { parts: [Array], role: 'model' },
+    finishReason: 'STOP',
+    index: 0,
+    safetyRatings: [ [Object], [Object], [Object], [Object] ]
+  }
+]" (type Array) at path "feedback"
+2024-09-15T11:47:20.403Z [31merror[39m: Gemini API call failed: Cannot read properties of undefined (reading 'parts')
+2024-09-15T11:48:06.845Z [31merror[39m: Feedback validation failed: feedback: Cast to string failed for value "[
+  {
+    content: { parts: [Array], role: 'model' },
+    finishReason: 'STOP',
+    index: 0,
+    safetyRatings: [ [Object], [Object], [Object], [Object] ]
+  }
+]" (type Array) at path "feedback"
+2024-09-15T11:48:56.108Z [31merror[39m: Gemini API call failed: Cannot read properties of undefined (reading '0')
+2024-09-15T11:53:43.306Z [31merror[39m: Gemini API call failed: Request failed with status code 400
+2024-09-15T11:54:32.866Z [31merror[39m: Gemini API call failed: Request failed with status code 400
+2024-09-15T11:55:53.198Z [31merror[39m: Feedback validation failed: feedback: Cast to string failed for value "{
+  parts: [
+    {
+      text: 'This employee is currently performing significantly below expectations across all key areas.  \n' +
+        '\n' +
+        "**Here's how you can frame the feedback:**\n" +
+        '\n' +
+        '**Opening:** \n' +
+        '\n' +
+        `* "I'm concerned about your recent performance. We've noticed some areas where you're struggling, and we want to work together to improve."\n` +
+        '\n' +
+        '**Specific Feedback:**\n' +
+        '\n' +
+        `* **Productivity:**  "Your productivity levels have been consistently low.  We've seen a significant gap between your output and what's expected for this role." \n` +
+        `* **Teamwork:** "It's been challenging to see you contribute effectively as part of the team. We need everyone to collaborate and support each other." \n` +
+        `* **Punctuality:** "Your recent tardiness is impacting the team's workflow and deadlines. It's important to be on time and prepared for work."\n` +
+        `* **Communication:**  "Communication is crucial for success. We've observed that you struggle to effectively communicate your ideas and needs, which can lead to misunderstandings and delays."\n` +
+        '* **Problem-Solving:** "We need to see more initiative and problem-solving skills from you. When challenges arise, we need to work together to find solutions."\n' +
+        '\n' +
+        '**Focus on Solutions:**\n' +
+        '\n' +
+        '* **Ask:**  "What obstacles are preventing you from meeting expectations in these areas? What can we do to support you in improving?"\n' +
+        `* **Offer:**  "We're committed to helping you succeed. We can provide additional training, resources, or mentorship to assist you in improving your skills." \n` +
+        `* **Set Expectations:**  "We need to see significant improvement in these areas. Let's work together to set realistic goals and a plan for achieving them."\n` +
+        '\n' +
+        '**Closing:**\n' +
+        '\n' +
+        `* "I believe in your potential. We need to see a shift in your approach and commitment. Let's schedule a follow-up meeting in [ timeframe] to discuss your progress."\n` +
+        '\n' +
+        '**Important Notes:**\n' +
+        '\n' +
+        '* **Be Direct and Specific:**  Use concrete examples to illustrate the issues.\n' +
+        '* **Focus on Behavior, Not Personality:**  Avoid making personal attacks.  Frame your feedback in terms of actions and results. \n' +
+        '* **Be Supportive and Solution-Oriented:**  The goal is to help the employee improve, not punish them. \n' +
+        '* **Document the Feedback:**  Keep a written record of the conversation for your records.\n' +
+        '\n' +
+        '**Consider additional factors:**\n' +
+        '\n' +
+        '* **Is this a new employee or someone with a history of strong performance?** The approach may need to be adjusted accordingly.\n' +
+        '* **What are the underlying causes for the poor performance?** Are there personal or professional challenges the employee is facing?\n' +
+        '* **Does the employee have the necessary skills and resources to improve?** If not, what steps can be taken to address these gaps?\n'
+    }
+  ],
+  role: 'model'
+}" (type Object) at path "feedback"
+2024-09-15T12:00:35.226Z [31merror[39m: Feedback validation failed: feedback: Cast to string failed for value "{
+  parts: [
+    {
+      text: '## Feedback for [Employee Name]\n' +
+        '\n' +
+        'This feedback is intended to help you improve your performance and reach your full potential within the team.\n' +
+        '\n' +
+        '**Overall:** Your performance in the past period has been significantly below expectations across multiple areas. While we understand that everyone faces challenges, your current performance needs significant improvement. \n' +
+        '\n' +
+        '**Specific areas for improvement:**\n' +
+        '\n' +
+        "* **Productivity:** Your productivity has been consistently low. You have struggled to complete tasks on time and have fallen behind on your assigned workload. It's important to prioritize your tasks and manage your time effectively. Consider using time management techniques or tools to improve your efficiency.\n" +
+        '* **Teamwork:** Your collaboration with colleagues has been inadequate. You have not actively participated in team projects and have often shown a lack of willingness to assist others. It is crucial for team members to work together effectively and support each other. \n' +
+        "* **Punctuality:** You have consistently been late to work and meetings, which disrupts the flow of work and shows a lack of respect for your colleagues' time. Punctuality is essential for a smooth workflow and professional environment.\n" +
+        '* **Communication:** Your communication has been lacking clarity and efficiency. You have often failed to deliver information in a timely and understandable manner, leading to misunderstandings and delays. Clear and concise communication is vital for effective collaboration and problem-solving. \n' +
+        '* **Problem-solving:**  You have struggled to identify and address problems effectively.  You often require significant assistance in resolving even minor issues, delaying projects and impacting team efficiency.  Developing your problem-solving skills is crucial for your professional growth.\n' +
+        '\n' +
+        '**Moving forward:**\n' +
+        '\n' +
+        'We strongly encourage you to take initiative and work towards improving your performance in these areas. We are here to support you through this process. Please schedule a meeting with your manager to discuss specific action plans and strategies for improvement.  \n' +
+        '\n' +
+        'Remember that continuous learning and development are key to achieving success in your role.  We encourage you to utilize available resources and seek guidance when needed.\n' +
+        '\n' +
+        'We are committed to helping you succeed and believe that with dedicated effort and focus, you can significantly improve your performance. \n'
+    }
+  ],
+  role: 'model'
+}" (type Object) at path "feedback"
+2024-09-15T12:03:30.824Z [31merror[39m: Feedback validation failed: feedback: Cast to string failed for value "{
+  parts: [
+    {
+      text: "This performance review reflects a significant need for improvement in multiple areas. It's crucial to address these concerns directly and constructively, focusing on actionable steps for development.\n" +
+        '\n' +
+        "**Here's a possible feedback structure:**\n" +
+        '\n' +
+        '**Introduction:**\n' +
+        '\n' +
+        "* Begin by acknowledging the employee's contributions and effort. \n" +
+        "* Express your concern about their recent performance and the impact it's having on the team.\n" +
+        '\n' +
+        '**Specific Areas for Improvement:**\n' +
+        '\n' +
+        `* **Productivity:** "Your productivity levels have been consistently below expectations. This is reflected in [specific examples, e.g., missed deadlines, incomplete tasks].  It's essential to prioritize tasks, manage your time effectively, and seek support when needed to ensure you meet deadlines and achieve desired results." \n` +
+        `* **Teamwork:** "Your contributions to teamwork have been minimal. This has impacted the team's ability to function effectively [specific examples, e.g., lack of collaboration, unwillingness to help others].  It's crucial to actively participate in team activities, offer support to colleagues, and communicate effectively to foster a collaborative work environment."\n` +
+        `* **Punctuality:**  "Your punctuality has been a recurring issue. [Specific examples, e.g., frequent late arrivals, absences without notice].  This impacts the team's schedule and workflow.  It's important to prioritize being on time and communicate any unavoidable delays promptly."\n` +
+        `* **Communication:** "Your communication has been inadequate.  [Specific examples, e.g., unclear communication, difficulty conveying information, lack of responsiveness].  Effective communication is essential for collaboration and project success.  It's important to clearly communicate your ideas, listen attentively to feedback, and respond to inquiries promptly." \n` +
+        `* **Problem-solving:** "Your approach to problem-solving has been ineffective.  [Specific examples, e.g., inability to identify solutions, lack of initiative to resolve issues].  It's important to analyze situations, identify potential solutions, and utilize available resources to address challenges effectively."\n` +
+        '\n' +
+        '**Action Plan:**\n' +
+        '\n' +
+        '* Offer specific, actionable recommendations for improvement in each area. \n' +
+        '* Set clear goals and timelines for improvement. \n' +
+        '* Provide resources and support for development.\n' +
+        '* Schedule regular follow-up meetings to monitor progress.\n' +
+        '\n' +
+        '**Conclusion:**\n' +
+        '\n' +
+        "* Reiterate your commitment to supporting the employee's development and express your confidence in their ability to improve.\n" +
+        '*  Let them know you are available to provide guidance and support along the way.\n' +
+        '\n' +
+        '**Important Notes:**\n' +
+        '\n' +
+        '* **Be specific and avoid generalizations:**  Use concrete examples to illustrate areas for improvement.\n' +
+        '* **Maintain a positive and constructive tone:**  Focus on solutions and future progress.\n' +
+        "* **Be empathetic:** Acknowledge the employee's perspective and offer support.\n" +
+        '* **Offer resources:** Provide training opportunities, coaching sessions, or access to relevant resources.\n' +
+        '* **Follow-up:** Regularly check in to track progress and offer ongoing support.\n' +
+        '\n' +
+        '**Remember:** This is a sensitive situation requiring careful handling. Be patient, supportive, and committed to helping the employee improve their performance. \n'
+    }
+  ],
+  role: 'model'
+}" (type Object) at path "feedback"
+2024-09-15T12:07:11.395Z [31merror[39m: Gemini API call failed: Cannot read properties of undefined (reading '0')
+2024-09-15T12:08:03.799Z [31merror[39m: Feedback validation failed: feedback: Cast to string failed for value "{
+  parts: [
+    {
+      text: 'This performance review reflects significant areas for improvement. \n' +
+        '\n' +
+        "**Productivity:** Your productivity is currently well below expectations. This is impacting the team's overall output and deadlines. I strongly recommend you prioritize task management, time allocation, and identify any potential obstacles hindering your productivity. It may be beneficial to discuss strategies like prioritizing tasks, utilizing time management techniques, and seeking clarification when needed. \n" +
+        '\n' +
+        '**Teamwork:**  Collaboration is crucial in our workplace, and your current level of teamwork is lacking. It is vital to actively engage with colleagues, contribute to discussions, and support team efforts.  Consider initiatives like offering assistance to colleagues, participating actively in team projects, and fostering open communication within the team.\n' +
+        '\n' +
+        '**Punctuality:** Your attendance record needs significant improvement.  Arriving on time demonstrates respect for your colleagues and your commitments. Regularly being late disrupts workflow and can negatively impact project timelines.  Please prioritize arriving punctually and communicate any unavoidable delays proactively.\n' +
+        '\n' +
+        '**Communication:** Communication is a fundamental aspect of any workplace. Your current communication skills are inadequate, which hinders clear understanding and collaboration.  Focus on expressing your thoughts and ideas clearly, actively listening to feedback, and seeking clarification when needed. \n' +
+        '\n' +
+        '**Problem-solving:**  Your approach to problem-solving needs substantial improvement.  Developing critical thinking skills and a proactive approach to challenges is crucial.  When facing obstacles, focus on identifying potential solutions, seeking guidance when necessary, and approaching issues with a solution-oriented mindset. \n' +
+        '\n' +
+        'This feedback is provided to support your growth and development. I am available to discuss these areas further and provide guidance and resources for your improvement.  I believe in your potential and am confident you can achieve success with dedication and effort.\n'
+    }
+  ],
+  role: 'model'
+}" (type Object) at path "feedback"
+2024-09-15T12:10:56.882Z [31merror[39m: Feedback validation failed: feedback: Cast to string failed for value "[
+  {
+    text: "This feedback session is crucial to help this employee improve. It's important to approach it with a focus on constructive criticism and support, aiming to help them reach their full potential. \n" +
+      '\n' +
+      '**Here is a sample feedback structure:**\n' +
+      '\n' +
+      '**[Employee Name],**\n' +
+      '\n' +
+      'This is a feedback session to discuss your recent performance.  While we appreciate your dedication to the team, there are some areas where we need to see significant improvement. \n' +
+      '\n' +
+      '**Productivity (2/10):** \n' +
+      "Your current productivity level is significantly below expectations.  We've observed a consistent lack of output and a slow pace of work.  It's essential to prioritize tasks, manage your time effectively, and focus on completing assignments within reasonable deadlines. \n" +
+      '\n' +
+      '**Recommendations:**\n' +
+      '\n' +
+      '* **Time Management Training:** Consider taking a course or workshop on time management techniques to develop effective strategies for prioritizing tasks and managing your workload. \n' +
+      '* **Goal Setting:**  Work with your manager to set achievable daily/weekly goals to ensure you are consistently working towards measurable targets.\n' +
+      '\n' +
+      '**Teamwork (2/10):**\n' +
+      "We've noticed a lack of engagement and collaboration within the team.  It's essential to contribute actively, participate in discussions, and offer support to your colleagues. \n" +
+      '\n' +
+      '**Recommendations:**\n' +
+      '\n' +
+      "* **Active Listening:** Practice actively listening to colleagues' ideas and feedback, and offer constructive suggestions during team meetings. \n" +
+      '* **Collaboration:** Seek opportunities to work collaboratively on projects, share your knowledge, and learn from others.\n' +
+      '\n' +
+      '**Punctuality (2/10):**\n' +
+      "Your frequent tardiness is impacting team workflow and deadlines.  It's crucial to arrive on time and be prepared to start work promptly.\n" +
+      '\n' +
+      '**Recommendations:**\n' +
+      '\n' +
+      '* **Time Management:**  Ensure you are adequately planning your commute and allowing ample time to arrive at work on time. \n' +
+      '* **Communication:** If unforeseen circumstances cause delays, inform your manager or colleagues promptly.\n' +
+      '\n' +
+      '**Communication (1/10):** \n' +
+      'Your communication skills need significant improvement. This includes unclear communication, neglecting to provide updates, and difficulty responding to emails and inquiries promptly.  Effective communication is critical in any work environment.\n' +
+      '\n' +
+      '**Recommendations:**\n' +
+      '\n' +
+      '* **Active Listening:** Practice actively listening to understand instructions and requests clearly.  \n' +
+      '* **Clear Communication:**  Craft clear and concise emails and messages, providing necessary details and context.\n' +
+      '* **Response Timeliness:**  Respond to emails and messages within a reasonable timeframe, ensuring you are available for necessary communication.\n' +
+      '\n' +
+      '**Problem-Solving (1/10):**\n' +
+      "Your problem-solving skills need improvement. You haven't been able to adequately analyze problems or offer effective solutions.  Being able to think critically and implement solutions is essential for success.\n" +
+      '\n' +
+      '**Recommendations:**\n' +
+      '\n' +
+      '* **Problem Analysis:**  Practice analyzing problems systematically, identifying root causes, and exploring potential solutions.\n' +
+      '* **Solution Implementation:**  Develop the ability to test solutions, evaluate their effectiveness, and adapt approaches based on results.\n' +
+      '\n' +
+      '**Overall:**\n' +
+      '\n' +
+      'We understand that everyone has areas for improvement.  We are committed to supporting you in developing the necessary skills to succeed in this role. We strongly encourage you to take these recommendations seriously and work diligently to improve your performance.  \n' +
+      '\n' +
+      'We are available to discuss this further and provide additional support.  We are confident that you can make significant progress with dedication and effort.  \n' +
+      '\n' +
+      '**[Your Name]**\n' +
+      '**[Your Title]** \n'
+  }
+]" (type Array) at path "feedback"
+2024-09-15T14:46:16.434Z [31merror[39m: Feedback for this period already exists
+2024-09-15T15:54:34.477Z [31merror[39m: Cannot read properties of null (reading 'password')
