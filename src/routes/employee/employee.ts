@@ -32,7 +32,7 @@ router.post("/update", async (req: Request | any, res: Response | any) => {
     id,
     employeeName,
     email,
-    joiningDate
+    joiningDate,
   });
   const { status } = response;
   return responseWithStatus(res, status, response);
@@ -59,20 +59,39 @@ router.get(
   }
 );
 
-router.delete('/delete', async (req: Request | any, res: Response | any) => {
+router.delete("/delete", async (req: Request | any, res: Response | any) => {
   const { id } = req.query;
-  const controller = new EmployeeController(req, res)
+  const controller = new EmployeeController(req, res);
   const response = await controller.delete(id);
   const { status } = response;
-  return responseWithStatus(res, status, response)
-})
+  return responseWithStatus(res, status, response);
+});
 
-router.post("/generateFeedback",authenticateManager, async (req: Request | any, res: Response | any) => {
+router.post(
+  "/generateFeedback",
+  authenticateManager,
+  async (req: Request | any, res: Response | any) => {
     const { employeeId, periodFrom, periodTo, metrics } = req.body;
     const controller = new EmployeeController(req, res);
-    const response = await controller.generateFeedback({ employeeId, periodFrom, periodTo, metrics });
+    const response = await controller.generateFeedback({
+      employeeId,
+      periodFrom,
+      periodTo,
+      metrics,
+    });
     const { status } = response;
     return responseWithStatus(res, status, response);
-  });
-  
+  }
+);
+
+router.get(
+  "/compareEmployeeFeedback",
+  async (req: Request | any, res: Response | any) => {
+    const { employee1Id, employee2Id } = req.query
+    const controller = new EmployeeController(req, res);
+    const response = await controller.compareEmployeeFeedback(employee1Id,employee2Id);
+    const { status } = response;
+    return responseWithStatus(res, status, response);
+  }
+);
 module.exports = router;

@@ -3,13 +3,16 @@ import dotenv from "dotenv";
 import path from "path";
 dotenv.config({ path: path.join(__dirname, "..", ".env") });
 
-export const geminiAPI = async (employeeName:string,metrics: {
-  productivity: number;
-  teamwork: number;
-  punctuality: number;
-  communication: number;
-  problemSolving: number;
-}): Promise<string> => {
+export const geminiAPI = async (
+  employeeName: string,
+  metrics: {
+    productivity: number;
+    teamwork: number;
+    punctuality: number;
+    communication: number;
+    problemSolving: number;
+  }
+): Promise<string> => {
   try {
     // Create the prompt with detailed instructions for feedback generation
     const prompt = `Provide feedback for an ${employeeName} based on the following performance metrics:
@@ -47,6 +50,56 @@ export const geminiAPI = async (employeeName:string,metrics: {
       }
     );
 
+    // Check if 'candidates' exists and extract the generated content properly
+    if (
+      response.data &&
+      response.data.candidates &&
+      response.data.candidates.length > 0
+    ) {
+      const generatedFeedback =
+        response.data.candidates[0].content.parts[0].text;
+      return generatedFeedback;
+    } else {
+      return "No feedback generated";
+    }
+  } catch (err: any) {
+    throw new Error(`Gemini API call failed: ${err.message}`);
+  }
+};
+
+export const compareEmployee = async (
+  employe1: any,
+  employe2: any
+): Promise<string> => {
+  try {
+    // Create the prompt with detailed instructions for feedback generation
+    // console.log(employe1,employe2)
+    const prompt = `Provide feedback for an ${employe1} and ${employe2}based on the following performance metrics:
+  which is better  employee send Name in  response `;
+
+    // Define the payload for the Gemini API
+    const payload = {
+      contents: [
+        {
+          parts: [
+            {
+              text: prompt,
+            },
+          ],
+        },
+      ],
+    };
+    const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+    // Make the request to the Google Gemini API
+    const response = await axios.post(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${GEMINI_API_KEY}`,
+      payload,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     // Check if 'candidates' exists and extract the generated content properly
     if (
       response.data &&

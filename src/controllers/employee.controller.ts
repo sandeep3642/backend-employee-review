@@ -11,7 +11,7 @@ import {
 } from "../helpers/db.helpers";
 import logger from "../configs/logger.config";
 import mongoose from "mongoose";
-import {geminiAPI } from "../utils/gpt.util"; // You need to create a util to handle GPT API calls.
+import { compareEmployee, geminiAPI } from "../utils/gpt.util"; // You need to create a util to handle GPT API calls.
 import feedbackModel from "../models/feedback.model";
 
 @Tags("Employees")
@@ -187,20 +187,20 @@ export default class EmployeeController extends Controller {
         },
         {
           $project: {
-            email:1,  
+            email: 1,
             _id: 1,
             employeeName: 1, // Assuming you have a name field in the employee schema
             employeeId: 1,
-            joiningDate:1,// Include the feedbacks array
-            feedbacks: 1, 
+            joiningDate: 1, // Include the feedbacks array
+            feedbacks: 1,
           },
         },
       ]);
-  
+
       if (!employeeFeedback || employeeFeedback.length === 0) {
         throw new Error("Employee not found");
       }
-  
+
       return {
         data: employeeFeedback[0], // Since aggregation returns an array
         error: "",
@@ -217,7 +217,6 @@ export default class EmployeeController extends Controller {
       };
     }
   }
-  
 
   /**
    * Get all user, require admin token
@@ -288,7 +287,7 @@ export default class EmployeeController extends Controller {
   ): Promise<IResponse> {
     try {
       const { employeeId, periodFrom, periodTo, metrics } = request;
-  
+
       // Fetch the employee data
       const employee = await findOne(employeModel, {
         _id: new mongoose.Types.ObjectId(employeeId),
@@ -296,7 +295,7 @@ export default class EmployeeController extends Controller {
       if (!employee) {
         throw new Error("Employee not found");
       }
-  
+
       // Check if feedback for the same employeeId, periodFrom, and periodTo already exists
       const existingFeedback = await findOne(feedbackModel, {
         employeeId: employee.employeeId,
@@ -306,10 +305,10 @@ export default class EmployeeController extends Controller {
       if (existingFeedback) {
         throw new Error("Feedback for this period already exists");
       }
-  
+
       // Generate feedback using geminiAPI
-      const feedback = await geminiAPI(employee.employeeName,metrics);
-  
+      const feedback = await geminiAPI(employee.employeeName, metrics);
+
       // Save feedback to the feedback collection
       const feedbackResponse = await upsert(feedbackModel, {
         employee: employee._id,
@@ -319,7 +318,7 @@ export default class EmployeeController extends Controller {
         metrics,
         feedback,
       });
-  
+
       return {
         data: feedbackResponse,
         error: "",
@@ -336,5 +335,61 @@ export default class EmployeeController extends Controller {
       };
     }
   }
-  
+
+ /**
+ * Compare two employees' feedback
+ */
+@Get("/compareEmployeeFeedback")
+public async compareEmployeeFeedback(
+  @Query() employee1Id: string,
+  @Query() employee2Id: string
+): Promise<IResponse> {
+  try {
+    // Fetch feedback for the first employee
+    console.log(employee1Id,employee2Id  )
+    const employeeFeedback1 = await feedbackModel.findOne({ employee: new mongoose.Types.ObjectId(employee1Id)  });
+    if (!employeeFeedback1) {
+      throw new Error("Feedback not found for employee 1");
+    }
+
+    // Fetch feedback for the second employee
+    const employeeFeedback2 = await feedbackModel.findOne({ employee:  new mongoose.Types.ObjectId(employee2Id) });
+    if (!employeeFeedback2) {
+      throw new Error("Feedback not found for employee 2");
+    }
+const betterEmployee = await compareEmployee(employeeFeedback1?.feedback ,employeeFeedback2?.feedback )
+   
+
+    // Return the comparison results
+    return {
+      data: betterEmployee,
+      error: "",
+      message: "Feedback comparison successful",
+      status: 200,
+    };
+  } catch (err: any) {
+    logger.error(`${err.message}`);
+    return {
+      data: null,
+      error: err.message || err,
+      message: "",
+      status: 400,
+    };
+  }
+}
+
+// Helper function to compare individual metrics
+private compareMetric(
+  metric1: number,
+  metric2: number,
+  metricName: string
+): string {
+  if (metric1 > metric2) {
+    return `Employee 1 has better ${metricName}`;
+  } else if (metric1 < metric2) {
+    return `Employee 2 has better ${metricName}`;
+  } else {
+    return `Both employees have the same ${metricName}`;
+  }
+}
 }
